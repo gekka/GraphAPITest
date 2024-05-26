@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net8.0;net462</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		
+	
+		<Nullable>enable</Nullable>
+		<LangVersion>11.0</LangVersion>
+		<RootNamespace>ConsoleApp1</RootNamespace>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Azure.Identity" Version="1.11.3" />
+	  <PackageReference Include="Microsoft.Graph" Version="5.54.0" />
+	</ItemGroup>
+
+</Project>
