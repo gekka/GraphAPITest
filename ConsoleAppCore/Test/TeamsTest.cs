@@ -14,6 +14,27 @@ namespace ConsoleApp1.Test
 {
     internal class TeamsTest
     {
+        /// <summary></summary>
+        /// <param name="graphClient"></param>
+        /// <param name="messageText"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// User.Read
+        /// TeamsTab.ReadWriteForChat
+        /// TeamSettings.ReadWrite.All
+        /// TeamsAppInstallation.ReadWriteSelfForChat
+        /// TeamsAppInstallation.ReadWriteForChat
+        /// TeamsAppInstallation.ReadWriteAndConsentSelfForChat
+        /// TeamsAppInstallation.ReadWriteAndConsentForChat
+        /// TeamsAppInstallation.ReadForChat
+        /// Team.ReadBasic.All
+        /// Group.ReadWrite.All
+        /// ChatMessage.Send
+        /// ChatMessage.Read
+        /// ChatMember.Read
+        /// Chat.ReadWrite
+        /// ChannelSettings.Read.All
+        /// </remarks>
         public static async Task PostMessageAsync(GraphServiceClient graphClient, string messageText = "From Application")
         {
             var chatMessage = new Microsoft.Graph.Models.ChatMessage();
