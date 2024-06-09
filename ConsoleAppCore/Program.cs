@@ -17,9 +17,10 @@
         static async Task Main(string[] args)
         {
             bool isTestTeamsPost = false;
-            bool isTestOneDriveUploadTest = true;
-
-            bool useClientSecret = false;
+            bool isTestOneDriveUploadTest = false;
+            bool isTestSharePointUploadTest = true;
+           
+            bool useClientSecret = true;
 
 
             try
@@ -50,6 +51,10 @@
                     if (isTestOneDriveUploadTest)
                     {
                         await OneDriveTest.FileUploadAsync(graphClient, (mail) => mail == TestSettings.OnedriveAccountEmail);
+                    }
+                    if (isTestSharePointUploadTest)
+                    {
+                        await SharePointTest.FileUploadAsync(graphClient);
                     }
 
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -122,6 +127,11 @@
         /// <summary>Onedriveのアカウントのメールアドレス</summary>
         public static string OnedriveAccountEmail = "";
 
+        /// <summary>SharePointのアップロード先のサイト名</summary>
+        public static string SharePointSiteName = "";
+        public static string SharePointSiteID = "";
+        public static string SharePointDriveID = "";
+        public static string SharePointListID = "";
     }
     */
 }

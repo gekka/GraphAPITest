@@ -31,7 +31,7 @@ namespace ConsoleApp1.Test
 
             //System.Diagnostics.Debug.WriteLine(string.Join("\r\n", users.Value.Select(_ => _.Mail)));
 
-            var selectedUsers = users.Value.Where(_ => _.Mail != null && emailFilter(_.Mail)).ToArray();
+            var selectedUsers = users.Value.Where(_ => _.UserPrincipalName != null && emailFilter(_.Mail)).ToArray();
             if (selectedUsers.Length == 0)
             {
                 throw new ApplicationException("目当てのアカウント取得できませんでした");
